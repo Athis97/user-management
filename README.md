@@ -43,7 +43,7 @@ SQLite was used as the database for simplicity, and test cases have been impleme
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-repo/user-management-api.git
+    git clone https://github.com/Athis97/user-management.git
     cd user-management-api
     ```
 
@@ -52,38 +52,27 @@ SQLite was used as the database for simplicity, and test cases have been impleme
     composer install
     ```
 
-3. Set up the `.env` file:
-    ```bash
-    cp .env.example .env
-    ```
-
-4. Configure the database for SQLite:
+3. Configure the database for SQLite:
     ```env
     DB_CONNECTION=sqlite
-    DB_DATABASE=/absolute/path/to/database.sqlite
     ```
 
-5. Create the SQLite database file:
-    ```bash
-    touch database/database.sqlite
-    ```
-
-6. Run the database migrations:
+4. Run the database migrations:
     ```bash
     php artisan migrate
     ```
 
-7. Generate the JWT secret key:
+5. Generate the JWT secret key:
     ```bash
     php artisan jwt:secret
     ```
 
-8. Start the development server:
+6. Start the development server:
     ```bash
     php artisan serve
     ```
 
-The API should now be running at `http://localhost:8000`.
+The API should now be running at `http://127.0.0.1:8000`.
 
 ## Code Structure
 
@@ -101,7 +90,7 @@ app/
 │   ├── Controllers/
 │   │   └── UserController.php
 ├── Middleware/
-│   └── LogRequestResponse.php (Custom logging middleware)
+│   └── LogRequest.php (Custom logging middleware)
 ├── Models/
 │   └── User.php
 database/
@@ -166,14 +155,6 @@ GET /api/users
 Authorization: Bearer {token}
 ```
 
-## Future Improvements
-
-- **Validation Enhancements**: More detailed validation and error handling.
-- **Search & Filtering**: Implement search and filtering options for users.
-- **Role-based Access Control**: Add more roles and permissions for API access.
-
----
-
 ### Contact
 
-For any questions or feedback, feel free to reach out via [email@example.com].
+For any questions or feedback, feel free to reach out via [trichyathis@gmail.com].
